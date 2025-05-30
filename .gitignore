@@ -64,3 +64,13 @@ __pycache__/
 # Kişisel/çalışma dosyaları
 sonuc.jpg
 görseller/
+# Flutter build output
+build/
+**/build/
+app1.py
+yaprak_segmentasyon_final.py
+yaprak_segmentasyon.py
+local_yaprak_segmentasyon.py
+sonuc.jpg
+görseller/
+assets/
