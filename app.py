@@ -10,6 +10,28 @@ import time
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import os
+import requests
+
+def download_file_from_google_drive(url, destination):
+    if not os.path.exists(destination):
+        print(f"{destination} indiriliyor...")
+        response = requests.get(url, stream=True)
+        with open(destination, "wb") as f:
+            for chunk in response.iter_content(chunk_size=8192):
+                if chunk:
+                    f.write(chunk)
+        print(f"{destination} indirildi.")
+
+# Model dosyası yoksa indir
+download_file_from_google_drive(
+    "https://drive.google.com/uc?export=download&id=143otNbtJIUk255fviGREVu970tJlva2C",
+    "best_u2net_leaf_model.pth"
+)
+download_file_from_google_drive(
+    "https://drive.google.com/uc?export=download&id=1C_aykNRjBR0KTyQz6uzVYd1MTQEauerv",
+    "leaf_model.tflite"
+)
 
 app = Flask(__name__)
 CORS(app)
