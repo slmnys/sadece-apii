@@ -77,7 +77,7 @@ görseller/
 
 # Flutter build output
 **/build/
-app1.py
+kaydetme.py
 yaprak_segmentasyon_final.py
 yaprak_segmentasyon.py
 local_yaprak_segmentasyon.py
