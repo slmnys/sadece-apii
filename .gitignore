@@ -50,22 +50,32 @@ ENV/
 env/
 .venv/
 
-# Model ve büyük dosyalar
+# Python cache ve derleme dosyaları
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Model dosyaları (büyük dosyalar)
 *.pth
 *.tflite
+*.h5
 
-# Çıktı ve geçici dosyalar
-*.log
-*.pyc
-__pycache__/
+# IDE ve sistem dosyaları
+.idea/
+.vscode/
+.DS_Store
+
+# Geçici ve çıktı dosyaları
 *.tmp
 *.bak
 
 # Kişisel/çalışma dosyaları
 sonuc.jpg
 görseller/
+
 # Flutter build output
-build/
 **/build/
 app1.py
 yaprak_segmentasyon_final.py

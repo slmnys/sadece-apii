@@ -47,7 +47,7 @@ class _LeafClassificationScreenState extends State<LeafClassificationScreen> {
 
   // Android emülatör için: http://10.0.2.2:5000
   // Gerçek cihaz için: http://192.168.x.x:5000 (kendi bilgisayarınızın IP'si)
-  final String serverUrl = 'http://10.0.2.2:5000';
+  final String serverUrl = 'https://yaprak-tani-api.onrender.com';
   final List<String> supportedClasses = ['apple', 'grape', 'orange', 'soybean', 'tomato'];
 
   Future<void> _pickImage(ImageSource source) async {
